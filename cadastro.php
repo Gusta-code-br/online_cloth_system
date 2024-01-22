@@ -31,8 +31,8 @@ $fullName = isset($data['fullName']) ? $mysqli->real_escape_string($data['fullNa
 
 if ($username !== null && $password !== null && $email !== null && $phone !== null && $fullName !== null) {
     // Consulta SQL para inserir um novo usuário
-    $query = "INSERT INTO usuarios (id, username, password, email, phone, fullName) 
-              VALUES ('2', '$username', '$password', '$email', '$phone', '$fullName')";
+    $query = "INSERT INTO tusers (username, password, email, phone, fullName) 
+              VALUES ('$username', '$password', '$email', '$phone', '$fullName')";
     $result = $mysqli->query($query);
 
     if ($result) {
